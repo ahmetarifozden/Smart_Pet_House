@@ -1,0 +1,83 @@
+:Author: Muhammed Said BİLGEHAN
+:Email: msaidbilgehan@gmail.com
+:Date: 05/04/2020
+:License: Private Domain
+
+= Project: Home Pet Project
+
+
+== Step 1: Installation
+
+  1. Get the Project from GitLab: https://gitlab.com/msaidbilgehan/home-pet-project
+
+  2. Set the necessary hardware
+    a. 1 Arduino UNO
+    b. 1 Water Sensor
+    c. 1 HX711 Weight Sensor
+    d. 1 ESP8266 (ESP-01s) Wifi Module
+    e. Optionally Bread Board for user friendly connection of hardware
+    f. Necessary number of cables between Arduino pins, and other components
+
+
+  3. Get library and Calibrate Weight Module with detailed in [here](https://steemit.com/utopian-io/@drencolha/making-a-weight-scale-with-the-hx711-module-hx711-arduino-library-and-a-load-cell-tutorial) .
+
+  3. Update the Wifi Module with detailed in [here](https://maker.robotistan.com/esp8266-ile-iot-dersleri-1-esp8266-modulunu-guncelleme/#Arduino-UNO-ESP8266-Baglantisi) .
+
+  4. While uploading code in project, unconnect between Arduino and ESP Wifi Module's RX & TX connections.
+      Otherwise Arduino IDE will give error because it's Serial Ports connected to ESP Module.
+      After uploading code, you should connect ESP Wifi Module's RX & TX connections to Arduino.
+
+  5. Upload .ino file to Arduino UNO
+
+  6. Use!
+
+
+== Step 3: Assemble the circuit
+
+  CODE DEFAULT PIN CONFIGURATIONS
+    // ==================
+    // PIN CONFIGURATIONS
+    // ==================
+
+    WATER_SENSOR_PIN          A3                // Attach Water sensor to Arduino Analog pin 3 - A3
+    WEIGHT_SENSOR_FIRST_PIN   A1                // Attach Weight sensor to Arduino Analog pin 1 - A1
+    WEIGHT_SENSOR_SECOND_PIN  A0                // Attach Weight sensor to Arduino Analog pin 0 - A0
+
+    ---
+
+    Assemble the circuit following the diagram layout.png attached to the sketch
+
+
+== Step 4: Load the code
+
+    Upload the code contained in this sketch on to your board
+
+=== Some Tips
+
+  When Serial Monitor activated, and preprocessor variable "IS_WEIGHT_CALIBRATIN_ACTIVATED" is true weight sensor calibration option will be available with basic usage below;
+    1) Please remove all weight from scale
+    2) Place known weights on scale one by one
+      Press 'w' to increase calibration factor by 25
+      Press 's' to decrease calibration factor by 25
+      Press 'e' to increase calibration factor by 250
+      Press 'd' to decrease calibration factor by 250
+      Press 't' for tare (to set scale zero which is no weight base)
+      Press 'd' for change calibration factor to default
+      Press 'q' for tare and finish the calibration
+
+  Also, more information will be printed for user-friendly design
+
+=== License
+
+    This project is released under given license in LICENSE file.
+
+
+=== Contributing
+
+    To contribute to this project please contact eMSiBi <msaidbilgehan@gmail.com>
+
+
+=== Help
+This document is written in the _AsciiDoc_ format, a markup language to describe documents.
+If you need help you can search the http://www.methods.co.nz/asciidoc[AsciiDoc homepage]
+or consult the http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]
