@@ -1,6 +1,6 @@
 # Ağırlık Sensörü ile Akıllı Beslenme Sistemi
 
-Bu proje İÜC Karmaşık Mühendislik Tasarımı birimi altında yapılmıştır , bir ağırlık sensörü (HX711) kullanarak, evcil hayvanların mama ve su seviyelerini izleyen ve verileri **ThingSpeak** platformu aracılığıyla web sitesi üzerinden gösteren bir sistemdir. Sensörlerden gelen veriler belirli aralıklarla ThingSpeak API'sine gönderilir ve kullanıcılar bu verilere internet üzerinden erişebilir.
+Bu proje **İÜC Karmaşık Mühendislik Tasarımı** birimi altında yapılmıştır , bir ağırlık sensörü (HX711) kullanarak, evcil hayvanların mama ve su seviyelerini izleyen ve verileri **ThingSpeak** platformu aracılığıyla web sitesi üzerinden gösteren bir sistemdir. Sensörlerden gelen veriler belirli aralıklarla ThingSpeak API'sine gönderilir ve kullanıcılar bu verilere internet üzerinden erişebilir.
 
 ## Özellikler
 
