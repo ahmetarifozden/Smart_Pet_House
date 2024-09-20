@@ -1,1 +1,72 @@
+# Ağırlık Sensörü ile Akıllı Sistem Tasarımı
 
+Bu proje, **Karmaşık Mühendislik Tasarımı** dersi kapsamında geliştirilmiş bir ağırlık sensörü sistemi üzerine kurulmuştur. Projede, sensörden alınan verilerin işlenmesi ve bu verilere dayalı çeşitli işlemlerin gerçekleştirilmesi amaçlanmıştır.
+
+## Proje Hakkında
+
+Bu proje, hassas ağırlık ölçümleri yapabilen bir ağırlık sensörü kullanarak, veri toplama ve analiz sürecini gerçekleştirmektedir. Projede kullanılan sensör, bir platform üzerinde nesnelerin ağırlığını algılayarak mikrodenetleyiciye veri gönderir. Bu veriler işlenir ve belirli kriterlere göre çıktı oluşturulur.
+
+### Projede Kullanılan Teknolojiler:
+- **Ağırlık Sensörü**: Yük hücresi (load cell) sensörü kullanılmıştır.
+- **Mikrodenetleyici**: Arduino/ESP32 gibi mikrodenetleyiciler kullanılarak sensörden veri okuma işlemi gerçekleştirilmiştir.
+- **C/C++**: Mikrodenetleyici için yazılım geliştirme dili.
+- **Python**: Verilerin analiz edilmesi ve görselleştirilmesi için Python kullanılmıştır.
+- **Veri Görselleştirme**: Matplotlib ve diğer kütüphaneler kullanılarak veri görselleştirilmiştir.
+
+## Kurulum
+
+Projeyi kendi bilgisayarınızda çalıştırmak için şu adımları izleyebilirsiniz:
+
+1. **Mikrodenetleyici Ayarları**:
+   - Proje Arduino IDE veya PlatformIO gibi geliştirme ortamlarında çalışacak şekilde yapılandırılmıştır.
+   - Ağırlık sensörünü mikrodenetleyiciye bağlayın ve aşağıdaki bağlantı şemasını izleyin:
+     - Sensör sinyal kablolarını HX711 modülüne bağlayın.
+     - HX711 modülünü mikrodenetleyiciye şu şekilde bağlayın:
+       - DT pin -> D2 (Arduino pin)
+       - SCK pin -> D3 (Arduino pin)
+   
+2. **Kütüphaneler**:
+   - Arduino IDE için gerekli olan HX711 kütüphanesini kurun.
+     ```bash
+     Arduino IDE -> Araçlar -> Kütüphane Yöneticisi -> HX711
+     ```
+
+3. **Sensör Kalibrasyonu**:
+   - Sensör kalibrasyonu yapmak için `calibration.ino` dosyasını kullanın. Kalibrasyon değerlerini belirledikten sonra bu değerleri ana kod içerisine ekleyin.
+
+4. **Python Ortamı**:
+   - Python ile verileri analiz etmek ve görselleştirmek için gerekli bağımlılıkları kurun:
+     ```bash
+     pip install matplotlib numpy
+     ```
+
+5. **Projeyi Çalıştırma**:
+   - Mikrodenetleyicide programı çalıştırın ve Python betiğini başlatarak verileri anlık olarak izleyin:
+     ```bash
+     python visualize_data.py
+     ```
+
+## Kullanım
+
+- Sistemi başlattıktan sonra ağırlık sensörü verilerini toplar ve ekrana veya bir veri tabanına kaydeder.
+- Veriler, Python ile görselleştirilebilir veya farklı analiz yöntemleri ile işlenebilir.
+
+## Ekran Görüntüleri
+
+| Ağırlık Verisi | Anlık Ölçüm |
+| --- | --- |
+| ![Ağırlık Sensörü](docs/sensor.png) | ![Veri Grafiği](docs/graph.png) |
+
+## Katkı
+
+Proje üzerinde çalışmak ve katkıda bulunmak isteyenler için:
+
+1. Bu projeyi forklayın (üst kısımda Fork düğmesine basın).
+2. Yeni bir özellik dalı (`feature-branch`) oluşturun.
+3. Değişikliklerinizi yapın ve commit edin.
+4. Değişikliklerinizi bu dalda paylaşın (`git push origin feature-branch`).
+5. Bir **Pull Request** oluşturun.
+
+## Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır - [Lisans dosyasını inceleyin](LICENSE).
