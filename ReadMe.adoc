@@ -1,1 +1,7 @@
+# HX711 Kullanarak Ağırlık Ölçüm Tartısı
+
+Bu proje, HX711 modülünü kullanarak bir ağırlık ölçüm tartısı oluşturmayı hedeflemektedir. Arduino ve HX711 modülü ile birlikte bir yük hücresi (load cell) kullanarak hassas ağırlık ölçümleri yapabilir, bu ölçümleri kalibre edebilir ve sonuçları bir seri monitör üzerinden görüntüleyebilirsiniz. Bu proje aynı zamanda tartının kalibrasyonunu yapabilmek için seri port üzerinden giriş yapılmasına olanak sağlar.
+
+## Gereksinimler
+Bu projeyi gerçekleştirebilmek için aşağıdaki donanım ve yazılım gereksinimlerine ihtiyacınız olacak:
 
