@@ -31,8 +31,8 @@
 // ====================
 // WIFI VE API AYARLARI
 // ====================
-#define WIFI_SSID                     "KUTAY"
-#define WIFI_PASSWORD                 "kutayyaman123"
+#define WIFI_SSID                     "iuc.misafir"
+#define WIFI_PASSWORD                 "iuc.1453"
 #define TEAM_SPEAK_SERVER_IP          "184.106.153.149"
 #define TEAM_SPEAK_API_KEY            "M3PNVOVHXJFJ9H2A"
 
