@@ -1,14 +1,10 @@
-:Author: Muhammed Said BİLGEHAN
-:Email: msaidbilgehan@gmail.com
-:Date: 05/04/2020
-:License: Private Domain
 
 = Project: Home Pet Project
 
 
 == Step 1: Installation
 
-  1. Get the Project from GitLab: https://gitlab.com/msaidbilgehan/home-pet-project
+  1. Download the project source file
 
   2. Set the necessary hardware
     a. 1 Arduino UNO
@@ -67,17 +63,3 @@
 
   Also, more information will be printed for user-friendly design
 
-=== License
-
-    This project is released under given license in LICENSE file.
-
-
-=== Contributing
-
-    To contribute to this project please contact eMSiBi <msaidbilgehan@gmail.com>
-
-
-=== Help
-This document is written in the _AsciiDoc_ format, a markup language to describe documents.
-If you need help you can search the http://www.methods.co.nz/asciidoc[AsciiDoc homepage]
-or consult the http://powerman.name/doc/asciidoc[AsciiDoc cheatsheet]

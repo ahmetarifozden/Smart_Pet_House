@@ -1,0 +1,63 @@
+= Proje: Evde Evcil Hayvan Projesi
+
+
+== 1. Adım: Kurulum
+
+   1. Proje kaynak dosyasını indirin
+
+   2. Gerekli donanımı ayarlayın
+     A. 1 Arduino UNO'su
+     B. 1 Su Sensörü
+     C. 1 HX711 Ağırlık Sensörü
+     D. 1 ESP8266 (ESP-01s) Wifi Modülü
+     e. Donanımın kullanıcı dostu bağlantısı için isteğe bağlı Bread Board
+     F. Arduino pinleri ve diğer bileşenler arasında gerekli sayıda kablo
+
+
+   3. Kütüphaneyi edinin ve Ağırlık Modülünü Kalibre Etme'yi [burada](https://steemit.com/utopian-io/@drencolha/making-a-weight-scale-with-the-hx711-module-hx711-arduino- adresinde bulabilirsiniz) kitaplık ve yük hücresi eğitimi).
+
+   3. Wifi Modülünü [burada](https://maker.robotistan.com/esp8266-ile-iot-dersleri-1-esp8266-modulunu-guncelleme/#Arduino-UNO-ESP8266-Baglantisi) adresinde ayrıntılı olarak güncelleyin.
+
+   4. Projeye kod yüklerken Arduino ile ESP Wifi Modülünün RX & TX bağlantıları arasındaki bağlantıyı kesin.
+       Aksi halde Arduino IDE, ESP Modülüne bağlı Seri Port olduğundan dolayı hata verecektir.
+       Kodu yükledikten sonra ESP Wifi Modülünün RX & TX bağlantılarını Arduino'ya bağlamalısınız.
+
+   5. .ino dosyasını Arduino UNO'ya yükleyin
+
+   6. Kullanın!
+
+
+== Adım 3: Devreyi kurun
+
+   KOD VARSAYILAN PIN YAPILANDIRMALARI
+     // ===================
+     // PIN YAPILANDIRMALARI
+     // ===================
+
+     WATER_SENSOR_PIN A3 // Su sensörünü Arduino Analog pin 3 - A3'e takın
+     WEIGHT_SENSOR_FIRST_PIN A1 // Ağırlık sensörünü Arduino Analog pin 1 - A1'e takın
+     WEIGHT_SENSOR_SECOND_PIN A0 // Ağırlık sensörünü Arduino Analog pin 0 - A0'a takın
+
+     ---
+
+     Taslağa ekli diyagram düzeni.png'yi takip ederek devreyi monte edin
+
+
+== 4. Adım: Kodu yükleyin
+
+     Bu taslaktaki kodu panonuza yükleyin
+
+=== Bazı İpuçları
+
+   Seri Monitör etkinleştirildiğinde ve "IS_WEIGHT_CALIBRATIN_ACTIVATED" ön işlemci değişkeni gerçek olduğunda ağırlık sensörü kalibrasyon seçeneği aşağıdaki temel kullanımla mevcut olacaktır;
+     1) Lütfen terazideki tüm ağırlığı kaldırın
+     2) Bilinen ağırlıkları teraziye tek tek yerleştirin.
+       Kalibrasyon faktörünü 25 artırmak için 'w' tuşuna basın
+       Kalibrasyon faktörünü 25 azaltmak için 's' tuşuna basın
+       Kalibrasyon faktörünü 250 artırmak için 'e'ye basın
+       Kalibrasyon faktörünü 250 azaltmak için 'd'ye basın
+       Dara için 't' tuşuna basın (ağırlık tabanı olmayan ölçeği sıfıra ayarlamak için)
+       Kalibrasyon faktörünü varsayılana değiştirmek için 'd'ye basın
+       Dara için 'q' tuşuna basın ve kalibrasyonu tamamlayın
+
+   Ayrıca kullanıcı dostu tasarım için daha fazla bilgi basılacaktır.
