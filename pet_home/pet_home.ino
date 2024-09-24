@@ -11,13 +11,13 @@
 
 // Kalibrasyon tuşları
 #if IS_WEIGHT_CALIBRATION_ACTIVE
-  #define INCREASE_25_BUTTON          'w'
-  #define DECREASE_25_BUTTON          's'
+  #define INCREASE_25_BUTTON          'q'
+  #define DECREASE_25_BUTTON          'w'
   #define INCREASE_250_BUTTON         'e'
-  #define DECREASE_250_BUTTON         'd'
+  #define DECREASE_250_BUTTON         'r'
   #define TARE_BUTTON                 't'
-  #define DEFAULT_BUTTON              'd'
-  #define EXIT_BUTTON                 'q'
+  #define DEFAULT_BUTTON              'y'
+  #define EXIT_BUTTON                 'u'
   #define CALIBRATION_STEP            25
 #endif
 
